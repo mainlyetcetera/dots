@@ -29,12 +29,13 @@ vim.keymap.set("n", "<Space>", "<nop>")
 vim.keymap.set("n", "<leader><ENTER>", "i <Esc>r<ENTER>")
 
 vim.keymap.set("n", "<leader>sn", "<cmd>set relativenumber!<CR>")
-vim.keymap.set("n", "ygy", '"+yy')
-vim.keymap.set("n", "ygf", 'gg0"+yG')
-vim.keymap.set("n", "ygE", '"+yE')
-vim.keymap.set("n", "ygp", '"+yip')
-vim.keymap.set("n", "ygw", '"+yiw')
-vim.keymap.set("n", "yge", '0v$h"+y')
+vim.keymap.set("n", "ygy", '"+yy"*yy')
+vim.keymap.set("n", "ygf", 'gg0"+yGgg0"*yG')
+vim.keymap.set("n", "ygE", '"+yE"*yE')
+vim.keymap.set("n", "ygp", '"+yip"*yip')
+vim.keymap.set("n", "ygw", '"+yiw"*yiw')
+vim.keymap.set("n", "yge", '^v$h"+y^v$h"*y')
+vim.keymap.set("n", "ygq", '"+yi""*yi"')
 
 -- this sets up the prompt for Emmet to put in html with emmet syntax
 vim.keymap.set("n", "<leader>em", "<cmd>Emmet<CR>")
@@ -42,6 +43,9 @@ vim.keymap.set("n", "<leader>em", "<cmd>Emmet<CR>")
 vim.keymap.set("n", "<leader>sv", "<cmd>so ~/.config/nvim/init.lua<CR>")
 vim.keymap.set("n", "<leader>sc", "<cmd>so ~/.config/nvim/lua/beginning/packer.lua<CR>")
 vim.keymap.set("n", "<leader>ev", "<cmd>e ~/.vimrc<CR>")
+
+-- add text block
+vim.keymap.set("n", '<leader><leader>lk', 'i```<Esc>yypk$alng<Esc>b')
 
 -- cheatsheets
 vim.keymap.set("n", '<leader>csv', '<cmd>vsp<CR><C-W>l<cmd>sp<CR><cmd>e ~/cheatsheets/vim.md<CR><C-W>j<cmd>e ~/cheatsheets/intros/vim.txt<CR><C-W>k<cmd>vert res 60<CR>')

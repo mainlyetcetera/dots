@@ -12,4 +12,4 @@ vim.keymap.set("n", "<leader>tk", ":Git checkout ")
 vim.keymap.set("n", "<leader>tw", "<cmd>Gwrite<CR>")
 vim.keymap.set("n", "<leader>tP", "<cmd>Git -p push<CR>")
 vim.keymap.set("n", "<leader>tp", "<cmd>Git -p pull<CR>")
-
+vim.keymap.set("n", "<leader>tgl", "<cmd>Git log --oneline<CR>")

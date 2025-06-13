@@ -1,8 +1,9 @@
 vim.opt.belloff = "all"
 -- vim.opt.shiftwidth = 1
+vim.opt.shiftwidth = 2
 -- vim.opt.shiftwidth = 4
 vim.opt.relativenumber = true
-vim.opt.numberwidth = 5
+-- vim.opt.numberwidth = 5
 -- vim.opt.tabstop = 4
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 1
