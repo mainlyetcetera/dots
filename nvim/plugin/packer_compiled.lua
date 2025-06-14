@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["CopilotChat.nvim"] = {
+    loaded = true,
+    path = "/home/chimaera/.local/share/nvim/site/pack/packer/start/CopilotChat.nvim",
+    url = "https://github.com/CopilotC-Nvim/CopilotChat.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/chimaera/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -103,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/chimaera/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lua-tiktoken"] = {
+    loaded = true,
+    path = "/home/chimaera/.local/share/nvim/site/pack/packer/start/lua-tiktoken",
+    url = "https://github.com/gptlang/lua-tiktoken"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,

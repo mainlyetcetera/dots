@@ -8,9 +8,9 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.8',
-    -- or                            , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
+      'nvim-telescope/telescope.nvim', tag = '0.1.8',
+      -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   use({ 'rose-pine/neovim', as = 'rose-pine' })
@@ -51,6 +51,15 @@ return require('packer').startup(function(use)
     }
   }
 
+  use {
+      'CopilotC-Nvim/CopilotChat.nvim',
+      requires = {
+          { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+          { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+          { "gptlang/lua-tiktoken" },
+      }
+  }
+
   use 'mfussenegger/nvim-dap-python'
 
   use {
@@ -74,3 +83,18 @@ return require('packer').startup(function(use)
     }
   }
 end)
+
+-- return {
+--   {
+--     "CopilotC-Nvim/CopilotChat.nvim",
+--     dependencies = {
+--       { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+--       { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+--     },
+--     build = "make tiktoken", -- Only on MacOS or Linux
+--     opts = {
+--       -- See Configuration section for options
+--     },
+--     -- See Commands section for default commands if you want to lazy load on them
+--   },
+-- }

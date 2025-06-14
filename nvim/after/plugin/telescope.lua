@@ -40,14 +40,16 @@ vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>ph', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>pc', builtin.commands, {})
+-- can this start the picker in normal mode?
+vim.keymap.set('n', '<leader>pp', builtin.command_history, {})
 vim.keymap.set('n', '<leader>pm', builtin.keymaps, {})
 vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({
-		search = vim.fn.input("Grep > ") ,
-		additional_args = {
-			"--hidden"
-		}
-	} )
+        search = vim.fn.input("Grep > ") ,
+        additional_args = {
+            "--hidden"
+        }
+    })
 end)
 
 -- builtin.command_history({opts})          *telescope.builtin.command_history()*
