@@ -20,6 +20,7 @@ chat.setup {
 vim.keymap.set("n", "<leader>gc", "<cmd>CopilotChat<CR>")
 vim.keymap.set("n", "<leader>ge", "<cmd>CopilotChatExplain<CR>")
 vim.keymap.set("n", "<leader>gf", "<cmd>CopilotChatFix<CR>")
+vim.keymap.set("v", "<leader>gf", "<cmd>CopilotChatFix<CR>")
 vim.keymap.set("n", "<leader>gt", "<cmd>CopilotChatTests<CR>")
 vim.keymap.set("n", "<leader>go", "<cmd>CopilotChatOptimize<CR>")
 
