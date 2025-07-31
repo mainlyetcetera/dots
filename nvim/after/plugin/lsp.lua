@@ -56,6 +56,7 @@ lsp.on_attach(function(client, bufnr)
   -- how do i stop the lsp if it's too much on the buffer? how to turn off?!
   vim.keymap.set("n", "<leader>vrc", function() vim.lsp.stop_client() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  vim.keymap.set("n", "<leader><leader>fc", vim.lsp.stop_client, opts)
 end)
 
 require'lspconfig'.omnisharp.setup {
@@ -107,15 +108,16 @@ require('lspconfig').pylsp.setup{
         pylsp = {
             plugins = {
                 pycodestyle = {
-                    enabled = false,
-                    ignore = {"W191", "E101"}, -- Example: Ignore tab-related warnings
+                    enabled = true,
+                    ignore = {"W191", "E101", "W293"}, -- Example: Ignore tab-related warnings
                     maxLineLength = 100
                 },
                 pylint = {
                     enabled = false -- Disable pylint if you only want specific errors
                 },
                 flake8 = {
-                    enabled = false -- Disable flake8 if needed
+                    enabled = false, -- Disable flake8 if needed
+                    ignore = {"W293"} -- Example: Ignore tab-related warnings
                 }
             }
         }

@@ -1,4 +1,4 @@
-vim.g.mapleader = " "
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("n", "/", "/\\v")
@@ -27,7 +27,8 @@ vim.keymap.set("n", "<leader>7", "<C-^><CR>")
 -- do i actually still need this for some reason?
 vim.keymap.set("n", "<Space>", "<nop>")
 vim.keymap.set("n", "<leader><ENTER>", "i <Esc>r<ENTER>")
-
+vim.keymap.set("n", "<leader><leader>fn", '"%p"ayiWcc<Esc>')
+vim.keymap.set("n", "<leader><leader>fp", '"ap')
 vim.keymap.set("n", "<leader>sn", "<cmd>set relativenumber!<CR>")
 vim.keymap.set("n", "ygy", '"+yy"*yy')
 vim.keymap.set("n", "ygf", 'gg0"+yGgg0"*yG')
